@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Bootstrap CDN -->
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-  >
+  <meta charset="UTF-8">
+  <title>Thank You | NOVAXIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Optional: Bootstrap for basic resets & responsiveness -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
   <style>
     body {
-      background: #f7f7f7;
-      padding: 40px;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f5f7;
+      color: #333;
     }
-    .thankyou-box {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 8px;
-      max-width: 500px;
-      margin: 0 auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    .thankyou-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-    h2 {
-      margin-bottom: 20px;
-    }
-    .btn-download {
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 16px;
-    }
-  </style>
-</head>
 
-<body>
-
-  <div class="thankyou-box">
-    <h2>Thank you for your interest!</h2>
-    <p>Your requested presentation is ready.</p>
-
-    <!-- Download Button -->
-    <a href="{pdfUrl}" target="_blank" class="btn btn-primary btn-download">
-      Download Presentation
-    </a>
-  </div>
-
-</body>
-</html>
+    .thankyou-card {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0
