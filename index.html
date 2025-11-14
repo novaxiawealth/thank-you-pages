@@ -34,4 +34,150 @@
       background-color: #ffffff;
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .thankyou-content {
+      flex: 1 1 55%;
+      background-color: #7b8f57; /* olive green */
+      color: #ffffff;
+      padding: 45px 50px;
+      position: relative;
+    }
+
+    /* angled shape effect */
+    .thankyou-content::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -80px;
+      width: 160px;
+      height: 100%;
+      background-color: #7b8f57;
+      transform: skewX(-18deg);
+    }
+
+    .thankyou-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .thankyou-title {
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 1.1;
+      margin: 0 0 15px;
+    }
+
+    .thankyou-subtitle {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .thankyou-text {
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 380px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .btn-novaxia {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 999px;
+      border: none;
+      background-color: #f2b633; /* warm yellow, like your Canva button */
+      color: #1f2f3a;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+    }
+
+    .btn-novaxia:hover,
+    .btn-novaxia:focus {
+      background-color: #f7c651;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    .thankyou-image {
+      flex: 1 1 45%;
+      position: relative;
+      min-height: 260px;
+    }
+
+    .thankyou-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* mobile layout */
+    @media (max-width: 768px) {
+      .thankyou-card {
+        flex-direction: column;
+      }
+
+      .thankyou-content {
+        flex-basis: auto;
+        padding: 30px 25px 35px;
+      }
+
+      .thankyou-content::after {
+        display: none;
+      }
+
+      .thankyou-title {
+        font-size: 32px;
+      }
+
+      .thankyou-subtitle {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="thankyou-wrapper">
+  <div class="thankyou-card">
+    <div class="thankyou-content">
+      <div class="thankyou-eyebrow">Thank you!</div>
+      <h1 class="thankyou-title">Your response<br>has been recorded.</h1>
+      <div class="thankyou-subtitle">
+        Your personalised NOVAXIA material is now ready.
+      </div>
+      <p class="thankyou-text">
+        Click the button below to access your presentation. You can download it
+        as a PDF and share it with your partners or keep it for your records.
+      </p>
+
+      <!-- JotForm will replace {pdfUrl} with the actual link -->
+      <a class="btn-novaxia"
+         href="{pdfUrl}"
+         target="_blank"
+         rel="noopener noreferrer">
+        Download presentation →
+      </a>
+    </div>
+
+    <div class="thankyou-image">
+      <!-- Replace this with your own hosted image URL if you like -->
+      <img src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg"
+           alt="Team working at a laptop">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
