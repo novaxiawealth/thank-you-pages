@@ -261,27 +261,14 @@
     </div>
   </div>
 
-  <script>
-    // Read URL parameters
-    const params = new URLSearchParams(window.location.search);
-    let pdfUrl = params.get("pdfUrl");
-    const driveId = params.get("id");
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const pdfUrl = params.get("pdfUrl");
 
-    // If Drive ID is separate and not included in pdfUrl, rebuild it
-    if (pdfUrl && driveId && !pdfUrl.includes("id=")) {
-      if (!pdfUrl.includes("?")) {
-        pdfUrl += "?id=" + encodeURIComponent(driveId);
-      } else {
-        pdfUrl += "&id=" + encodeURIComponent(driveId);
-      }
-    }
-
-    // Apply to button if available
-    if (pdfUrl) {
-      const btn = document.getElementById("download-btn");
-      btn.href = decodeURIComponent(pdfUrl);
-    }
-  </script>
+  if (pdfUrl) {
+    document.getElementById("download-btn").href = pdfUrl;
+  }
+</script>
 
 </body>
 </html>
