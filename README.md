@@ -1,7 +1,7 @@
-# NOVAXIA Thank You Page
+# NOVAXIA Thank You Pages
 
-This repository hosts a custom thank-you page used in conjunction with a JotForm submission flow.  
-After a user completes the form, JotForm redirects them to this page and dynamically injects the
+This repository hosts custom thank-you pages used in conjunction with a JotForm submission flow.  
+After a user completes the form, JotForm redirects them to the according page and dynamically injects the
 generated PDF link into the download button.
 
 ## How it works
@@ -12,10 +12,13 @@ generated PDF link into the download button.
 
 ## Files
 - `index.html` — Main thank-you page (styled with embedded CSS).
+- `residential.html` - Thank-you page specifically for residential properties (styles with embedded CSS).
+- `industrial.html` - Thank-you page specifically for industrial properties (styles with embedded CSS).
+- `commercial.html` - Thank-you page specifically for commercial properties (styles with embedded CSS).
 - Assets — Logo, images, and supporting graphics.
 
 ## Deployment
 Hosted via **GitHub Pages**:
-- `https://despinanitti.github.io/novaxia-thank-you-page/`
+- `https://novaxiawealth.github.io/thank-you-pages/`
 
 No build step is required. Simply edit the HTML and commit.
