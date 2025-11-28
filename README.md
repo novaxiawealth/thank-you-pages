@@ -2,8 +2,7 @@
 
 This repository hosts custom thank-you pages used in Novaxia Wealth Advisors' projects. 
 
-In some cases the pages are used in conjunction with a JotForm submission flow.  
-After a user completes the form, JotForm redirects them to the according page and dynamically injects the
+In some cases the pages are used in conjunction with a JotForm submission flow. After a user completes the form, JotForm redirects them to the according page and dynamically injects the
 generated PDF link into the download button.
 
 ### How it works
