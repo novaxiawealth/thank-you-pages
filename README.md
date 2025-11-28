@@ -1,10 +1,12 @@
 # NOVAXIA Thank You Pages
 
-This repository hosts custom thank-you pages used in conjunction with a JotForm submission flow.  
+This repository hosts custom thank-you pages used in Novaxia Wealth Advisors' projects. 
+
+In some cases the pages are used in conjunction with a JotForm submission flow.  
 After a user completes the form, JotForm redirects them to the according page and dynamically injects the
 generated PDF link into the download button.
 
-## How it works
+### How it works
 - JotForm redirects the user using the parameter:  
   `?pdfUrl={URLENCODE:pdfUrl}`
 - The HTML page reads the URL parameter and updates the **Download PDF** button automatically.
@@ -15,6 +17,7 @@ generated PDF link into the download button.
 - `residential.html` - Thank-you page specifically for residential properties (styles with embedded CSS).
 - `industrial.html` - Thank-you page specifically for industrial properties (styles with embedded CSS).
 - `commercial.html` - Thank-you page specifically for commercial properties (styles with embedded CSS).
+- `property-download.html` and `property-thank-you.html` - Thank-you pages for specific projects (styles with embedded CSS).
 - Assets — Logo, images, and supporting graphics.
 
 ## Deployment
