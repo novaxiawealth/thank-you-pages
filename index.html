@@ -19,11 +19,19 @@
 
     body {
       font-family: Verdana, Geneva, sans-serif;
-      background-color: #809462;
+      background: linear-gradient(120deg, #7f8d63, #6f7e56);
+      background-size: 300% 300%;
+      animation: moveGradient 12s ease infinite;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #333333;
+    }
+
+    @keyframes moveGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .wrapper {
@@ -34,11 +42,25 @@
 
     .card {
       background-color: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      border-radius: 14px; 
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28); 
       padding: 60px 60px 70px;
       text-align: center;
-      border-top: 4px solid #6e844b;
+      border-top: 4px solid #c8a450; 
+      opacity: 0;
+      transform: scale(0.98);
+      animation: fadeInCard 2s forwards ease-out;
+    }
+
+    @keyframes fadeInCard {
+      from {
+        opacity: 0.85;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .logo {
@@ -46,21 +68,14 @@
     }
 
     .logo img {
-      max-width: 220px;
+      max-width: 200px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
 
-    .title {
-      font-size: 30px;
-      font-weight: bold;
-      margin-bottom: 18px;
-      color: #2f3b21;
-    }
-
     .thankyou {
-      font-size: 26px;
+      font-size: 36px;
       font-weight: bold;
       margin-bottom: 8px;
       color: #2f3b21;
@@ -76,7 +91,23 @@
       width: 60%;
       height: 1px;
       background-color: #d6d6d6;
-      margin: 0 auto 26px;
+      margin: 0 auto 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      font-size: 16px;
+      background-color: #6e844b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #596c3c;
     }
 
   </style>
@@ -88,14 +119,15 @@
     <div class="card">
 
       <div class="logo">
-        <img src="logo white.png" alt="logo">
+        <img src="logo white.png" alt="novaxia logo">
       </div>
-
-      <div class="title">Thank you!</div>
 
       <div class="divider"></div>
 
       <div class="thankyou">Thank you!</div>
+      <div class="subtitle">We appreciate your trust.</div>
+
+      <a href="https://novecon.finance" class="btn">Visit our Website</a>
 
     </div>
   </div>
@@ -107,6 +139,7 @@
     if (pdfUrl) {
       document.getElementById("download-btn").href = pdfUrl;
     }
+
     const cleanUrl = window.location.origin + window.location.pathname;
     window.history.replaceState({}, document.title, cleanUrl);
   </script>
