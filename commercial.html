@@ -1,0 +1,57 @@
+<!--Used in the Property Investment Project, Target Audience Version. 
+Client is redirected accordingly based on the type of property they are interested in 
+and is prompted to download the pdf they chose by clicking the download button.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You Page | NOVAXIA</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Base + Property CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/property.css">
+
+  <!-- Page-specific color override -->
+  <style>
+    :root {
+      --bg-main: #576977;
+      --primary: #576977;
+      --primary-hover: #44515c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+
+      <div class="logo">
+        <img src="assets/images/aeolis logo.png" alt="Novaxia logo">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="title">Property Investment Project</div>
+      <div class="subtitle">Thank you!</div>
+
+      <a
+        id="download-btn"
+        class="btn btn--download"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download PDF
+      </a>
+
+    </div>
+  </div>
+
+  <script src="js/property-investment.js"></script>
+
+</body>
+</html>

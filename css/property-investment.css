@@ -1,0 +1,25 @@
+/* ================================================
+   PROPERTY.CSS – PROPERTY INVESTMENT PROJECT PAGES
+   ================================================ */
+
+/* Override theme variables */
+:root {
+  --bg-main: #576977;
+  --primary: #576977;
+  --primary-hover: #44515c;
+  --title-color: #2f3b21;
+}
+
+body {
+  background: var(--bg-main);
+  animation: none;
+}
+
+.btn--download {
+  border-radius: 4px;
+}
+
+.btn--download:hover {
+  background-color: #dcdcdc;
+  color: #576977;
+}

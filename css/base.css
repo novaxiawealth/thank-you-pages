@@ -1,0 +1,128 @@
+/* ===============================
+   BASE.CSS – GLOBAL STYLES
+   Green theme is DEFAULT
+   =============================== */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Theme variables (default = green) */
+:root {
+  --bg-main: linear-gradient(120deg, #7f8d63, #6f7e56);
+  --bg-card: #ffffff;
+  --accent: #c8a450;
+  --primary: #6e844b;
+  --primary-hover: #596c3c;
+  --text-main: #333333;
+  --title-color: #2f3b21;
+}
+
+/* Body */
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  background: var(--bg-main);
+  background-size: 300% 300%;
+  animation: moveGradient 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+}
+
+/* Gradient animation */
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Layout */
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  padding: 60px 60px 70px;
+  text-align: center;
+  border-top: 4px solid var(--accent);
+
+  /* Fade-in */
+  opacity: 0;
+  transform: scale(0.98);
+  animation: fadeInCard 1.8s ease-out forwards;
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 18px;
+}
+
+.logo img {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text */
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: var(--title-color);
+}
+
+.subtitle {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: var(--title-color);
+}
+
+/* Divider */
+.divider {
+  width: 60%;
+  height: 1px;
+  background-color: #d6d6d6;
+  margin: 0 auto 26px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.08s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
