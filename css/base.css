@@ -94,7 +94,7 @@ body {
 }
 
 .subtitle {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 18px;
   color: var(--title-color);
@@ -126,3 +126,4 @@ body {
   background-color: var(--primary-hover);
   transform: translateY(-1px);
 }
+
