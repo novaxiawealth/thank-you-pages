@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You Page | NOVAXIA</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- Page theme overrides -->
+  <style>
+
+  .subtitle {
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+
+      <div class="logo">
+        <img src="assets/images/logo white.png" alt="logo">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="title">Thank you!</div>
+      <div class="subtitle">Your submission has been recorded.</div>
+
+      <a
+        id="download-btn"
+        class="btn btn--download"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download PDF
+      </a>
+
+    </div>
+  </div>
+
+  <script src="js/property-investment.js"></script>
+
+</body>
+</html>
+
