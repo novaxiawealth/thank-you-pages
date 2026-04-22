@@ -122,6 +122,10 @@ body {
   transition: background-color 0.2s ease, transform 0.08s ease;
 }
 
+.hidden {
+  display: none;
+}
+
 .btn:hover {
   background-color: var(--primary-hover);
   transform: translateY(-1px);
