@@ -9,7 +9,9 @@ const params = new URLSearchParams(window.location.search);
 const pdfUrl = params.get("pdfUrl");
 const downloadBtn = document.getElementById("download-btn");
 
-if (pdfUrl && downloadBtn) {
+if (!pdfUrl || pdfUrl === "null" || pdfUrl === "undefined") {
+  downloadBtn.classList.add("hidden");
+} else {
   downloadBtn.href = pdfUrl;
 }
 
